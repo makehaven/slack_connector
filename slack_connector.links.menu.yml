@@ -1,0 +1,6 @@
+slack_connector.settings:
+  title: 'Slack Connector Settings'
+  description: 'Configure the common Slack settings.'
+  parent: system.admin_config_services
+  route_name: slack_connector.settings
+  weight: 100

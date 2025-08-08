@@ -1,0 +1,7 @@
+slack_connector.settings:
+  path: '/admin/config/services/slack-connector'
+  defaults:
+    _form: '\Drupal\slack_connector\Form\SlackConnectorSettingsForm'
+    _title: 'Slack Connector Settings'
+  requirements:
+    _permission: 'administer site configuration'

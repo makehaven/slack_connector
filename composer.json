@@ -1,0 +1,6 @@
+{
+    "name": "makehaven/slack_connector",
+    "type": "drupal-custom-module",
+    "description": "Provides common configuration and shared functions for Slack integrations.",
+    "license": "GPL-2.0-or-later"
+}
