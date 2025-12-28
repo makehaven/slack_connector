@@ -2,5 +2,5 @@ name: Slack Connector
 type: module
 description: 'Provides common configuration and shared functions for Slack integrations.'
 core_version_requirement: ^10 || ^11
-version: 1.0
+version: '1.0'
 package: Custom
