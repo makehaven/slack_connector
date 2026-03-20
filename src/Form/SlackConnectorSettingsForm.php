@@ -38,6 +38,14 @@ class SlackConnectorSettingsForm extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    $form['asset_issue_fallback_channel'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Asset issue fallback channel'),
+      '#default_value' => $config->get('asset_issue_fallback_channel') ?? '#makehaven-facility',
+      '#description' => $this->t('Used by asset issue reports when a tool has no Slack channel routing. Leave blank to skip Slack posting entirely in that case.'),
+      '#required' => FALSE,
+    ];
+
     // Add a test button.
     $form['test_slack'] = [
       '#type' => 'submit',
@@ -98,6 +106,7 @@ class SlackConnectorSettingsForm extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $this->config('slack_connector.settings')
       ->set('webhook_url', $form_state->getValue('webhook_url'))
+      ->set('asset_issue_fallback_channel', trim((string) $form_state->getValue('asset_issue_fallback_channel')))
       ->save();
 
     parent::submitForm($form, $form_state);

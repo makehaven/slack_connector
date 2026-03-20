@@ -1,0 +1,13 @@
+slack_connector.settings:
+  type: config_object
+  label: 'Slack connector settings'
+  mapping:
+    webhook_url:
+      type: string
+      label: 'Slack webhook URL'
+    workspace_url:
+      type: string
+      label: 'Slack workspace URL'
+    asset_issue_fallback_channel:
+      type: string
+      label: 'Asset issue fallback channel'
